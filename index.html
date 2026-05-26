@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Copédia</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ========================= -->
+  <!-- TELA INICIAL -->
+  <!-- ========================= -->
+
+  <section class="tela-inicial ativa" id="inicio">
+
+    <h1>Copédia</h1>
+
+    <div class="texto">
+
+      <h2>
+        A História das Copas do Brasil
+      </h2>
+
+      <p>
+        Explore os momentos mais históricos da Seleção Brasileira nas Copas do Mundo.
+      </p>
+
+    </div>
+
+    <div class="botoes-anos">
+
+      <!-- 1958 -->
+
+      <button class="botao-ano" onclick="abrirPagina('1958')">
+
+        <img src="img/1958.png" alt="1958">
+
+        <div class="losango-ano">
+          1958
+        </div>
+
+        <div class="seta-card">
+          ›
+        </div>
+
+      </button>
+
+      <!-- 1962 -->
+
+      <button class="botao-ano" onclick="abrirPagina('1962')">
+
+        <img src="img/1962.png" alt="1962">
+
+        <div class="losango-ano">
+          1962
+        </div>
+
+        <div class="seta-card">
+          ›
+        </div>
+
+      </button>
+
+      <!-- 1970 -->
+
+      <button class="botao-ano" onclick="abrirPagina('1970')">
+
+        <img src="img/1970.png" alt="1970">
+
+        <div class="losango-ano">
+          1970
+        </div>
+
+        <div class="seta-card">
+          ›
+        </div>
+
+      </button>
+
+      <!-- 1994 -->
+
+      <button class="botao-ano" onclick="abrirPagina('1994')">
+
+        <img src="img/1994.png" alt="1994">
+
+        <div class="losango-ano">
+          1994
+        </div>
+
+        <div class="seta-card">
+          ›
+        </div>
+
+      </button>
+
+      <!-- 2002 -->
+
+      <button class="botao-ano" onclick="abrirPagina('2002')">
+
+        <img src="img/2002.png" alt="2002">
+
+        <div class="losango-ano">
+          2002
+        </div>
+
+        <div class="seta-card">
+          ›
+        </div>
+
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- 1958 -->
+  <!-- ========================= -->
+
+  <section class="pagina-ano" id="pagina-1958">
+
+    <div class="topo-ano">
+
+      <button class="voltar" onclick="voltarInicio()">
+        ‹
+      </button>
+
+      <h2>1958</h2>
+
+    </div>
+
+    <div class="conteudo-ano">
+
+      <h3>
+        Primeira Estrela
+      </h3>
+
+      <img
+        src="img/1958-selecao.png"
+        class="imagem-time"
+        alt="Brasil 1958"
+      >
+
+      <div class="card-texto">
+
+        <p>
+          A Copa de 1958 marcou o nascimento do Brasil como potência mundial no futebol. Com apenas 17 anos, Pelé encantou o planeta ao lado de Garrincha.
+        </p>
+
+        <br>
+
+        <p>
+          Sob o comando de Vicente Feola, a Seleção apresentou o inovador esquema 4-2-4, combinando velocidade, técnica e criatividade.
+        </p>
+
+        <br>
+
+        <p>
+          Na final contra a Suécia, o Brasil venceu por 5x2 e conquistou o primeiro título mundial de sua história.
+        </p>
+
+        <small>
+          Primeira estrela do Brasil • Suécia 1958
+        </small>
+
+      </div>
+
+      <div class="jogador">
+
+        <img
+          src="img/1958-jogador.png"
+          alt="Didi"
+          onclick="mostrarFrase(this)"
+        >
+
+        <div class="info-jogador">
+
+          <span class="frase-jogador">
+            Clique em mim
+          </span>
+
+          <span class="frase-escondida" style="display:none;">
+
+            <strong>MVP: Didi</strong><br>
+
+            Meia-armador com visão de jogo excepcional, responsável por controlar o ritmo da partida e realizar lançamentos extremamente precisos. Criador da famosa cobrança “folha seca”.
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-area">
+<iframe
+  width="100%"
+  height="315"
+  src="https://www.youtube.com/embed/v96CrPg1Nso?si=noOd_5usYLaa0OQT"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- 1962 -->
+  <!-- ========================= -->
+
+  <section class="pagina-ano" id="pagina-1962">
+
+    <div class="topo-ano">
+
+      <button class="voltar" onclick="voltarInicio()">
+        ‹
+      </button>
+
+      <h2>1962</h2>
+
+    </div>
+
+    <div class="conteudo-ano">
+
+      <h3>
+        O Show de Garrincha
+      </h3>
+
+      <img
+        src="img/1962-selecao.png"
+        class="imagem-time"
+        alt="Brasil 1962"
+      >
+
+      <div class="card-texto">
+
+        <p>
+          Em 1962, o Brasil chegou ao Chile como favorito, mas perdeu Pelé logo no início da competição devido a uma lesão.
+        </p>
+
+        <br>
+
+        <p>
+          Garrincha assumiu o protagonismo da equipe com atuações históricas, dribles desconcertantes e gols decisivos.
+        </p>
+
+        <br>
+
+        <p>
+          Na final contra a Tchecoslováquia, a Seleção virou a partida para 3x1 e confirmou o bicampeonato mundial.
+        </p>
+
+        <small>
+          O show de Garrincha • Chile 1962
+        </small>
+
+      </div>
+
+      <div class="jogador">
+
+        <img
+          src="img/1962-jogador.png"
+          alt="Garrincha"
+          onclick="mostrarFrase(this)"
+        >
+
+        <div class="info-jogador">
+
+          <span class="frase-jogador">
+            Clique em mim
+          </span>
+
+          <span class="frase-escondida" style="display:none;">
+
+            <strong>MVP: Garrincha</strong><br>
+
+            Ponta-direita conhecido pelo drible imprevisível e aceleração explosiva. Desequilibrava qualquer marcador com fintas rápidas e gols decisivos.
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-area">
+
+ <iframe
+  width="100%"
+  height="315"
+  src="https://www.youtube.com/embed/swE57cI6_4o?si=4B6b1Ufk5eIQSfFe"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- 1970 -->
+  <!-- ========================= -->
+
+  <section class="pagina-ano" id="pagina-1970">
+
+    <div class="topo-ano">
+
+      <button class="voltar" onclick="voltarInicio()">
+        ‹
+      </button>
+
+      <h2>1970</h2>
+
+    </div>
+
+    <div class="conteudo-ano">
+
+      <h3>
+        O Time Perfeito
+      </h3>
+
+      <img
+        src="img/1970-selecao.png"
+        class="imagem-time"
+        alt="Brasil 1970"
+      >
+
+      <div class="card-texto">
+
+        <p>
+          A Seleção de 1970 é considerada por muitos especialistas como a maior equipe da história do futebol mundial.
+        </p>
+
+        <br>
+
+        <p>
+          Com Pelé, Jairzinho, Rivellino, Gérson e Tostão, o Brasil apresentou um futebol ofensivo e extremamente criativo.
+        </p>
+
+        <br>
+
+        <p>
+          Na final contra a Itália, venceu por 4x1 e eternizou o famoso gol coletivo de Carlos Alberto Torres.
+        </p>
+
+        <small>
+          O time perfeito • México 1970
+        </small>
+
+      </div>
+
+      <div class="jogador">
+
+        <img
+          src="img/1970-jogador.png"
+          alt="Pelé"
+          onclick="mostrarFrase(this)"
+        >
+
+        <div class="info-jogador">
+
+          <span class="frase-jogador">
+            Clique em mim
+          </span>
+
+          <span class="frase-escondida" style="display:none;">
+
+            <strong>MVP: Pelé</strong><br>
+
+            Meia-atacante completo, unindo força física, inteligência tática e ambidestria. Distribuiu passes históricos e liderou uma das maiores seleções da história.
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-area">
+
+      <iframe
+  width="100%"
+  height="315"
+  src="https://www.youtube.com/embed/drsjxiXGtr0?si=7sKKlks3apGU-l1Q"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- 1994 -->
+  <!-- ========================= -->
+
+  <section class="pagina-ano" id="pagina-1994">
+
+    <div class="topo-ano">
+
+      <button class="voltar" onclick="voltarInicio()">
+        ‹
+      </button>
+
+      <h2>1994</h2>
+
+    </div>
+
+    <div class="conteudo-ano">
+
+      <h3>
+        O Tetra Mundial
+      </h3>
+
+      <img
+        src="img/1994-selecao.png"
+        class="imagem-time"
+        alt="Brasil 1994"
+      >
+
+      <div class="card-texto">
+
+        <p>
+          Após 24 anos sem títulos mundiais, o Brasil voltou ao topo em 1994 com uma equipe extremamente eficiente.
+        </p>
+
+        <br>
+
+        <p>
+          Liderada por Dunga no meio-campo e pela dupla Romário e Bebeto, a Seleção fez uma campanha sólida e competitiva.
+        </p>
+
+        <br>
+
+        <p>
+          A final contra a Itália terminou empatada e foi decidida nos pênaltis, garantindo o tetracampeonato brasileiro.
+        </p>
+
+        <small>
+          O retorno ao topo • EUA 1994
+        </small>
+
+      </div>
+
+      <div class="jogador">
+
+        <img
+          src="img/1994-jogador.png"
+          alt="Romário"
+          onclick="mostrarFrase(this)"
+        >
+
+        <div class="info-jogador">
+
+          <span class="frase-jogador">
+            Clique em mim
+          </span>
+
+          <span class="frase-escondida" style="display:none;">
+
+            <strong>MVP: Romário</strong><br>
+
+            Centroavante de finalização letal e posicionamento perfeito dentro da área. Foi decisivo durante toda a campanha do tetra.
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-area">
+
+        <iframe
+  width="100%"
+  height="315"
+ src="https://www.youtube.com/embed/rJMaEolEOe4?si=2Erm4IqFbu2wV2Vt" 
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- 2002 -->
+  <!-- ========================= -->
+
+  <section class="pagina-ano" id="pagina-2002">
+
+    <div class="topo-ano">
+
+      <button class="voltar" onclick="voltarInicio()">
+        ‹
+      </button>
+
+      <h2>2002</h2>
+
+    </div>
+
+    <div class="conteudo-ano">
+
+      <h3>
+        O Penta
+      </h3>
+
+      <img
+        src="img/2002-selecao.png"
+        class="imagem-time"
+        alt="Brasil 2002"
+      >
+
+      <div class="card-texto">
+
+        <p>
+          A Copa de 2002 marcou a redenção de Ronaldo Fenômeno após graves lesões no joelho.
+        </p>
+
+        <br>
+
+        <p>
+          Sob o comando de Felipão, os “3 Rs” — Ronaldo, Rivaldo e Ronaldinho Gaúcho — lideraram uma campanha invicta.
+        </p>
+
+        <br>
+
+        <p>
+          Na final contra a Alemanha, Ronaldo marcou dois gols e garantiu o histórico pentacampeonato mundial.
+        </p>
+
+        <small>
+          O penta histórico • Coreia/Japão 2002
+        </small>
+
+      </div>
+
+      <div class="jogador">
+
+        <img
+          src="img/2002-jogador.png"
+          alt="Ronaldo"
+          onclick="mostrarFrase(this)"
+        >
+
+        <div class="info-jogador">
+
+          <span class="frase-jogador">
+            Clique em mim
+          </span>
+
+          <span class="frase-escondida" style="display:none;">
+
+            <strong>MVP: Ronaldo Fenômeno</strong><br>
+
+            Centroavante explosivo, famoso pela condução em velocidade e pelas arrancadas decisivas que levaram o Brasil ao pentacampeonato.
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="video-area">
+
+          <iframe
+  width="100%"
+  height="315"
+ src="https://www.youtube.com/embed/N3ucYeMIF_8?si=dxoDPZw1vSHEAX-X"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

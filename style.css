@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Merriweather:wght@700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(20, 138, 34, 0.18), transparent 32%),
+    linear-gradient(135deg, #eeeeee, #cfcfcf);
+
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 24px 16px;
+}
+
+/* ESCONDER / MOSTRAR */
+
+.tela-inicial,
+.pagina-ano {
+  display: none;
+}
+
+.tela-inicial.ativa,
+.pagina-ano.ativa {
+  display: block;
+}
+
+/* LAYOUT PREMIUM */
+
+.tela-inicial,
+.pagina-ano {
+  width: min(100%, 460px);
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 34%),
+    linear-gradient(180deg, #08751d, #005c20);
+
+  color: white;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.22);
+}
+
+/* TOPO */
+
+.tela-inicial h1,
+.topo-ano {
+  background-color: white;
+  color: #064c19;
+}
+
+.tela-inicial h1 {
+  text-align: center;
+
+  font-family: 'Merriweather', serif;
+
+  font-size: clamp(28px, 8vw, 38px);
+
+  padding: 16px 10px;
+
+  letter-spacing: -1px;
+}
+
+.topo-ano {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.topo-ano h2 {
+  font-family: 'Merriweather', serif;
+
+  font-size: clamp(18px, 5vw, 24px);
+}
+
+.voltar {
+  position: absolute;
+
+  left: 16px;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  color: #064c19;
+
+  font-size: 34px;
+
+  font-family: inherit;
+
+  line-height: 1;
+}
+
+/* TELA INICIAL */
+
+.texto {
+  padding: 32px 24px 18px;
+
+  position: relative;
+}
+
+.texto::after {
+  content: "";
+
+  width: 34px;
+  height: 5px;
+
+  background-color: #ffd400;
+
+  border-radius: 50px;
+
+  display: block;
+
+  margin-top: 14px;
+}
+
+.texto h2 {
+  font-family: 'Merriweather', serif;
+
+  font-size: clamp(28px, 8vw, 38px);
+
+  line-height: 1.18;
+
+  margin-bottom: 14px;
+
+  max-width: 340px;
+}
+
+.texto p {
+  font-size: clamp(14px, 4vw, 17px);
+
+  line-height: 1.45;
+
+  max-width: 340px;
+
+  color: rgba(255,255,255,0.9);
+}
+
+/* CARDS DOS ANOS */
+
+.botoes-anos {
+  padding: 18px 20px 36px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.botao-ano {
+  width: 100%;
+  min-height: 112px;
+
+  border: 2px solid rgba(255,255,255,0.82);
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: rgba(0,0,0,0.16);
+
+  display: grid;
+  grid-template-columns: 1fr 48px;
+
+  align-items: center;
+
+  padding: 10px 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.botao-ano::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,70,23,0.15),
+      rgba(0,70,23,0.72)
+    );
+
+  z-index: 1;
+}
+
+.botao-ano img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.45;
+
+  filter: saturate(0.6) contrast(1.08);
+
+  transition:
+    opacity 0.35s ease,
+    filter 0.35s ease,
+    transform 0.35s ease;
+
+  font-size: 0;
+}
+
+.losango-ano {
+  width: 148px;
+  height: 96px;
+
+  background-color: #ffd400;
+
+  color: #0057ff;
+
+  font-size: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    0% 50%
+  );
+
+  position: relative;
+
+  z-index: 2;
+
+  text-shadow: 0 1px 0 rgba(255,255,255,0.7);
+
+  justify-self: center;
+}
+
+.seta-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1.5px solid rgba(255,255,255,0.85);
+
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 4px;
+
+  justify-self: end;
+}
+
+.botao-ano:hover,
+.botao-ano.preview {
+  transform: scale(1.025);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.28);
+}
+
+.botao-ano:hover img,
+.botao-ano.preview img {
+  opacity: 0.95;
+
+  filter: saturate(1) contrast(1.05);
+
+  transform: scale(1.05);
+}
+
+/* CONTEÚDO DOS ANOS */
+
+.conteudo-ano {
+  padding: 30px 22px 22px;
+
+  text-align: left;
+}
+
+.conteudo-ano h3 {
+  font-family: 'Merriweather', serif;
+
+  font-size: clamp(28px, 8vw, 38px);
+
+  line-height: 1.15;
+
+  margin-bottom: 18px;
+}
+
+.conteudo-ano h3::after {
+  content: "";
+
+  width: 34px;
+  height: 5px;
+
+  background-color: #ffd400;
+
+  border-radius: 50px;
+
+  display: block;
+
+  margin-top: 12px;
+}
+
+/* IMAGEM PRINCIPAL */
+
+.imagem-time {
+  width: 88%;
+
+  max-width: 390px;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  display: block;
+
+  margin:
+    28px auto 34px auto;
+
+  border-radius: 28px;
+
+  border: 3px solid rgba(255,255,255,0.92);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.34),
+    0 6px 16px rgba(0,0,0,0.20);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.imagem-time:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 24px 50px rgba(0,0,0,0.38),
+    0 8px 18px rgba(0,0,0,0.24);
+}
+
+/* CARD DE TEXTO */
+
+.card-texto {
+  width: 100%;
+
+  min-height: 130px;
+
+  background-color: white;
+
+  color: #111;
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  margin: 0 auto 16px auto;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.22);
+}
+
+.card-texto p {
+  font-size: 15px;
+
+  line-height: 1.45;
+
+  text-align: left;
+}
+
+.card-texto small {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 11px;
+
+  color: #0b6e26;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+/* CARD JOGADOR */
+
+.jogador {
+  width: 100%;
+
+  min-height: 96px;
+
+  background-color: white;
+
+  border-radius: 20px;
+
+  color: black;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 12px;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.22);
+}
+
+.jogador img {
+  width: 72px;
+  height: 72px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  border: 3px solid #0b6e26;
+
+  transition: transform 0.2s ease;
+}
+
+.jogador img:hover {
+  transform: scale(1.08);
+}
+
+.info-jogador {
+  flex: 1;
+}
+
+.info-jogador strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: #0b6e26;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 4px;
+}
+
+.frase-jogador {
+  display: block;
+
+  font-size: 14px;
+
+  line-height: 1.25;
+
+  text-align: left;
+
+  transition: 0.3s ease;
+}
+
+/* VÍDEO */
+
+.video-area {
+  margin-top: 6px;
+
+  padding: 18px 20px 34px;
+
+  text-align: left;
+}
+
+.video-area h3 {
+  font-size: 15px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.youtube-video {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background-color: #000;
+
+  display: block;
+
+  border: 3px solid rgba(255,255,255,0.88);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 42px rgba(0,0,0,0.38);
+}
+
+/* ANIMAÇÕES */
+
+.animar-entrada {
+  opacity: 0;
+
+  transform:
+    translateY(35px)
+    scale(0.98);
+
+  filter: blur(3px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.animar-entrada.ativo {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter: blur(0);
+}
+
+/* CELULAR */
+
+@media (max-width: 420px) {
+
+  .container {
+    padding: 0;
+  }
+
+  .tela-inicial,
+  .pagina-ano {
+    width: 100%;
+
+    min-height: 100vh;
+
+    box-shadow: none;
+  }
+
+  .texto {
+    padding: 26px 18px 16px;
+  }
+
+  .texto h2 {
+    font-size: 29px;
+  }
+
+  .texto p {
+    font-size: 14px;
+  }
+
+  .botoes-anos {
+    padding: 14px 14px 28px;
+
+    gap: 12px;
+  }
+
+  .botao-ano {
+    min-height: 98px;
+
+    grid-template-columns: 1fr 38px;
+
+    padding: 10px 12px;
+  }
+
+  .losango-ano {
+    width: 132px;
+    height: 84px;
+
+    font-size: 30px;
+  }
+
+  .seta-card {
+    width: 32px;
+    height: 32px;
+
+    font-size: 28px;
+  }
+
+  .conteudo-ano {
+    padding: 24px 16px 18px;
+  }
+
+  .conteudo-ano h3 {
+    font-size: 29px;
+  }
+
+  .imagem-time {
+    width: 92%;
+
+    margin:
+      22px auto 28px auto;
+
+    border-radius: 24px;
+  }
+
+  .card-texto p {
+    font-size: 14px;
+  }
+
+  .jogador img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .frase-jogador {
+    font-size: 12px;
+  }
+
+  .video-area {
+    padding: 16px 16px 30px;
+  }
+}
+
+/* NOTEBOOK */
+
+@media (min-width: 421px) {
+
+  .container {
+    align-items: flex-start;
+
+    padding: 32px 16px;
+  }
+
+  .tela-inicial,
+  .pagina-ano {
+    border-radius: 28px;
+
+    min-height: auto;
+  }
+}
