@@ -14,6 +14,13 @@ function abrirPagina(ano) {
   const pagina = document.getElementById(`pagina-${ano}`);
 
   pagina.classList.add('ativa');
+   
+  /*Voltar ao topo mesmo apos clique*/
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 
   ativarAnimacoes(pagina);
 }
@@ -46,7 +53,7 @@ function mostrarFrase(imagem) {
 
   const fraseEscondida = jogador.querySelector('.frase-escondida');
 
-  const textoOriginal = "Clique em mim";
+  const textoOriginal = "Clique no jogador";
 
   /* SE JÁ ESTÁ ABERTA → FECHA */
 
@@ -73,7 +80,7 @@ function resetarFrases() {
 
   frases.forEach(frase => {
 
-    frase.innerHTML = "Clique em mim";
+    frase.innerHTML = "Clique no jogador";
 
   });
 }
@@ -83,12 +90,25 @@ function resetarFrases() {
 function ativarAnimacoes(pagina) {
 
   const elementos = pagina.querySelectorAll(
-    '.imagem-time, .card-texto, .jogador, .video-area'
+
+    '.imagem-time, \
+    .card-texto, \
+    .jogador, \
+    .video-area, \
+    .titulo-copa, \
+    .descricao-copa, \
+    .subtitulo-copa, \
+    .voltar, \
+    .youtube-video, \
+    .container-jogadores'
+
   );
 
   elementos.forEach((elemento, index) => {
 
     elemento.classList.remove('animar-entrada');
+
+    elemento.classList.remove('ativo');
 
     void elemento.offsetWidth;
 
@@ -98,9 +118,10 @@ function ativarAnimacoes(pagina) {
 
       elemento.classList.add('ativo');
 
-    }, 120 * index);
+    }, 180 * index);
 
   });
+
 }
 
 /* PREVIEW DOS ANOS */
@@ -150,3 +171,58 @@ cardsAnos.forEach(card => {
   });
 
 });
+function alternarDarkMode() {
+
+  document.body.classList.toggle('dark-mode');
+}
+/* ========================= */
+/* MENU AUTOMÁTICO DOS ANOS */
+/* ========================= */
+
+const anos = [
+
+  '1958',
+  '1962',
+  '1970',
+  '1994',
+  '2002'
+
+];
+
+function criarMenuAnos() {
+
+  document
+    .querySelectorAll('.pagina-ano')
+    .forEach(pagina => {
+
+      const nav =
+        pagina.querySelector('.nav-anos');
+
+      if (!nav) return;
+
+      const anoAtual =
+        pagina.id.replace('pagina-', '');
+
+      nav.innerHTML = '';
+
+      anos.forEach(ano => {
+
+        nav.innerHTML += `
+
+          <button
+            class="${ano === anoAtual ? 'ano-ativo' : ''}"
+            onclick="abrirPagina('${ano}')">
+
+            ${ano}
+
+          </button>
+
+        `;
+
+      });
+
+    });
+
+}
+
+criarMenuAnos();
