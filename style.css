@@ -1,257 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Merriweather:wght@700;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background:
-    radial-gradient(circle at top left, rgba(20, 138, 34, 0.18), transparent 32%),
-    linear-gradient(135deg, #eeeeee, #cfcfcf);
-
-  font-family: 'Roboto Condensed', Arial, sans-serif;
-}
-
-.container {
-  width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
-  padding: 24px 16px;
-}
-
-/* ESCONDER / MOSTRAR */
-
-.tela-inicial,
-.pagina-ano {
-  display: none;
-}
-
-.tela-inicial.ativa,
-.pagina-ano.ativa {
-  display: block;
-}
-
-/* LAYOUT PREMIUM */
-
-.tela-inicial,
-.pagina-ano {
-  width: min(100%, 460px);
-
-  min-height: 100vh;
-
-  background:
-    radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 34%),
-    linear-gradient(180deg, #08751d, #005c20);
-
-  color: white;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 24px 70px rgba(0,0,0,0.22);
-}
-
-/* TOPO */
-
-.tela-inicial h1,
-.topo-ano {
-  background-color: white;
-  color: #064c19;
-}
-
-.tela-inicial h1 {
-  text-align: center;
-
-  font-family: 'Merriweather', serif;
-
-  font-size: clamp(28px, 8vw, 38px);
-
-  padding: 16px 10px;
-
-  letter-spacing: -1px;
-}
-
-.topo-ano {
-  min-height: 58px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-}
-
-.topo-ano h2 {
-  font-family: 'Merriweather', serif;
-
-  font-size: clamp(18px, 5vw, 24px);
-}
-
-.voltar {
-  position: absolute;
-
-  left: 16px;
-
-  background: none;
-  border: none;
-
-  cursor: pointer;
-
-  color: #064c19;
-
-  font-size: 34px;
-
-  font-family: inherit;
-
-  line-height: 1;
-}
-
-/* TELA INICIAL */
-
-.texto {
-  padding: 32px 24px 18px;
-
-  position: relative;
-}
-
-.texto::after {
-  content: "";
-
-  width: 34px;
-  height: 5px;
-
-  background-color: #ffd400;
-
-  border-radius: 50px;
-
-  display: block;
-
-  margin-top: 14px;
-}
-
-.texto h2 {
-  font-family: 'Merriweather', serif;
-
-  font-size: clamp(28px, 8vw, 38px);
-
-  line-height: 1.18;
-
-  margin-bottom: 14px;
-
-  max-width: 340px;
-}
-
-.texto p {
-  font-size: clamp(14px, 4vw, 17px);
-
-  line-height: 1.45;
-
-  max-width: 340px;
-
-  color: rgba(255,255,255,0.9);
-}
-
-/* CARDS DOS ANOS */
-
-.botoes-anos {
-  padding: 18px 20px 36px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 14px;
-}
-
-.botao-ano {
-  width: 100%;
-  min-height: 112px;
-
-  border: 2px solid rgba(255,255,255,0.82);
-
-  border-radius: 18px;
-
-  cursor: pointer;
-
-  position: relative;
-
-  overflow: hidden;
-
-  background-color: rgba(0,0,0,0.16);
-
-  display: grid;
-  grid-template-columns: 1fr 48px;
-
-  align-items: center;
-
-  padding: 10px 16px;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.botao-ano::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,70,23,0.15),
-      rgba(0,70,23,0.72)
-    );
-
-  z-index: 1;
-}
-
-.botao-ano img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  position: absolute;
-  inset: 0;
-
-  opacity: 0.45;
-
-  filter: saturate(0.6) contrast(1.08);
-
-  transition:
-    opacity 0.35s ease,
-    filter 0.35s ease,
-    transform 0.35s ease;
-
-  font-size: 0;
-}
-
-.losango-ano {
-  width: 148px;
-  height: 96px;
-
-  background-color: #ffd400;
-
-  color: #0057ff;
-
-  font-size: 34px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  clip-path: polygon(
-    50% 0%,
-    100% 50%,
-    50% 100%,
-    0% 50%
   );
 
   position: relative;
@@ -314,7 +60,7 @@ body {
 }
 
 .conteudo-ano h3 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Playfair Display', serif;
 
   font-size: clamp(28px, 8vw, 38px);
 
@@ -348,6 +94,8 @@ body {
   aspect-ratio: 16 / 9;
 
   object-fit: cover;
+
+  object-position: center top;
 
   display: block;
 
@@ -497,12 +245,23 @@ body {
 
 /* VÍDEO */
 
-.video-area {
-  margin-top: 6px;
+ .video-area {
 
-  padding: 18px 20px 34px;
+  margin-top: 18px;
+
+  padding: 22px 20px 38px;
 
   text-align: left;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(6px);
+
+  border-radius: 24px 24px 0 0;
 }
 
 .video-area h3 {
@@ -544,9 +303,9 @@ body {
   filter: blur(3px);
 
   transition:
-    opacity 0.7s ease,
-    transform 0.7s ease,
-    filter 0.7s ease;
+    opacity 4s ease,
+    transform 4s ease,
+    filter 4s ease;
 }
 
 .animar-entrada.ativo {
@@ -651,20 +410,505 @@ body {
   }
 }
 
-/* NOTEBOOK */
+/* NOTEBOOK / PC */
 
-@media (min-width: 421px) {
-
-  .container {
-    align-items: flex-start;
-
-    padding: 32px 16px;
-  }
+@media (min-width: 768px) {
 
   .tela-inicial,
   .pagina-ano {
-    border-radius: 28px;
 
-    min-height: auto;
+    max-width: 850px;
+
+    border-radius: 28px;
   }
+
+  .texto h2,
+  .conteudo-ano h3 {
+
+    font-size: 52px;
+  }
+
+  .texto p,
+  .card-texto p,
+  .frase-jogador {
+
+    font-size: 18px;
+  }
+
+  .botao-ano {
+
+    min-height: 150px;
+  }
+
+  .losango-ano {
+
+    width: 190px;
+    height: 120px;
+
+    font-size: 52px;
+  }
+
+  .imagem-time {
+
+    max-width: 620px;
+  }
+
+  .jogador {
+
+    padding: 18px;
+  }
+
+  .jogador img {
+
+    width: 90px;
+    height: 90px;
+  }
+
+  .video-area {
+
+    padding: 28px;
+  }
+}
+/* ========================= */
+/* FONTE DOS ANOS */
+/* ========================= */
+
+
+.losango-ano,
+.losango-ano span,
+.losango-ano p,
+.losango-ano h1,
+.losango-ano h2 {
+
+  font-family: 'Suburbana', sans-serif !important;
+
+letter-spacing: 2px;
+
+}
+/* ========================= */
+/* IMAGENS GLOBAIS */
+/* ========================= */
+
+img {
+
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+}
+/* ========================= */
+/* TABLETS */
+/* ========================= */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  .tela-inicial,
+  .pagina-ano {
+
+    width: min(100%, 620px);
+  }
+
+}
+
+/* ========================= */
+/* DARK MODE BUTTON */
+/* ========================= */
+
+.toggle-darkmode {
+
+  position: absolute;
+
+  top: 50%;
+
+  right: 14px;
+
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    rgba(0,0,0,0.08);
+
+  color: inherit;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.toggle-darkmode:hover {
+
+  transform:
+    translateY(-50%)
+    scale(1.06);
+
+  background:
+    rgba(0,0,0,0.14);
+}
+
+.toggle-darkmode:active {
+
+  transform: scale(0.94);
+}
+
+/* ========================= */
+/* HEADER RELATIVO */
+/* ========================= */
+
+.topo-ano {
+
+  position: relative;
+}
+
+/* ========================= */
+/* DARK MODE */
+/* ========================= */
+
+body.dark-mode {
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(10, 70, 18, 0.24),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      135deg,
+      #111111,
+      #050505
+    );
+}
+
+/* FUNDO PRINCIPAL */
+
+body.dark-mode .tela-inicial,
+body.dark-mode .pagina-ano {
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,0.05),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      180deg,
+      #053812,
+      #021d09
+    );
+}
+
+/* TOPO */
+
+body.dark-mode .tela-inicial h1,
+body.dark-mode .topo-ano {
+
+  background:
+    #050505;
+
+  color:
+    #f5f5f5;
+}
+
+/* BOTÃO DARK MODE NO DARK */
+
+body.dark-mode .toggle-darkmode {
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color:
+    white;
+}
+
+/* BOTÃO VOLTAR */
+
+body.dark-mode .voltar {
+
+  color:
+    #ffffff;
+
+  background:
+    rgba(255,255,255,0.08);
+}
+
+/* TEXTOS */
+
+body.dark-mode .texto p {
+
+  color:
+    rgba(255,255,255,0.82);
+}
+
+/* CARDS */
+
+body.dark-mode .card-texto,
+body.dark-mode .jogador {
+
+  background:
+    #101010;
+
+  color:
+    #f5f5f5;
+}
+
+/* TEXTOS DOS CARDS */
+
+body.dark-mode .card-texto small,
+body.dark-mode .info-jogador strong {
+
+  color:
+    #77d88f;
+}
+
+/* LOSANGO DOS ANOS */
+
+body.dark-mode .losango-ano {
+
+  background:
+    #b08a00;
+
+  color:
+    #7ea7ff;
+}
+
+/* SETAS */
+
+body.dark-mode .seta-card {
+
+  border-color:
+    rgba(255,255,255,0.55);
+}
+
+/* VÍDEO */
+
+body.dark-mode .video-area {
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border-top:
+    1px solid rgba(255,255,255,0.05);
+}
+
+/* IMAGENS */
+
+body.dark-mode .imagem-time {
+
+  border-color:
+    rgba(255,255,255,0.7);
+}
+
+/* CARD DOS ANOS */
+
+body.dark-mode .botao-ano {
+
+  background-color:
+    rgba(255,255,255,0.03);
+}
+
+/* HOVER DOS CARDS */
+
+body.dark-mode .botao-ano:hover,
+body.dark-mode .botao-ano.preview {
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.5);
+}
+.header-home {
+
+  position: relative;
+}
+
+/* DARK MODE */
+
+.toggle-darkmode {
+
+  position: absolute;
+
+  top: 50%;
+
+  right: 14px;
+
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 1s ease,
+    background 1s ease;
+}
+
+.toggle-darkmode:hover {
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+body.dark-mode .nav-anos {
+
+  background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .nav-anos button {
+
+  background: #181818;
+
+  color: white;
+}
+
+body.dark-mode .ano-ativo {
+
+  background: #b58f00 !important;
+
+  color: #9cb6ff !important;
+}
+/* ========================= */
+/* NAVEGAÇÃO AUTOMÁTICA */
+/* ========================= */
+
+.nav-anos {
+
+  display: flex;
+
+  gap: 10px;
+
+  padding: 14px 18px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+  background:
+    rgba(0,0,0,0.08);
+}
+
+.nav-anos::-webkit-scrollbar {
+
+  display: none;
+}
+
+.nav-anos button {
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 999px;
+
+  padding: 10px 18px;
+
+  background: white;
+
+  color: #08751d;
+
+  font-family: 'Suburbana', sans-serif;
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+}
+
+.nav-anos button:hover {
+
+  transform: translateY(-2px);
+
+  background: #ffd400;
+}
+
+.ano-ativo {
+
+  background: #ffd400 !important;
+
+  color: #0057ff !important;
+}
+/* ========================= */
+/* borda bonita */
+/* ========================= */
+.foto-mvp {
+
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid #f4c21a;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.25);
+
+}
+.foto-container {
+
+  position: relative;
+
+  width: fit-content;
+
+}
+
+.icone-coroa {
+
+  position: absolute;
+
+  top: -8px;
+  left: -8px;
+
+  width: 30px;
+  height: 30px;
+
+  background: #f4c21a;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+
+  z-index: 10;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.2);
+
 }
