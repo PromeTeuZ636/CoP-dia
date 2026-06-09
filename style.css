@@ -1,3 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Merriweather:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=Bebas+Neue&display=swap');
+@font-face {
+
+  font-family: 'Suburbana';
+
+  src: url('./fonts/Suburbana%20[Versao%20Demo].ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+
+body {
+
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+   scroll-behavior: smooth;
+
+  background:
+    radial-gradient(circle at top left, rgba(20, 138, 34, 0.18), transparent 32%),
+    linear-gradient(135deg, #eeeeee, #cfcfcf);
+
+  font-family: 'Inter', Arial, sans-serif;
+  transition:
+    background 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    color 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.container {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  padding:
+    clamp(18px, 3vw, 36px);
+
+}
+
+/* ESCONDER / MOSTRAR */
+
+.tela-inicial,
+.pagina-ano {
+  display: none;
+}
+
+.tela-inicial.ativa,
+.pagina-ano.ativa {
+  display: block;
+}
+
+/* LAYOUT PREMIUM */
+
+.tela-inicial,
+.pagina-ano {
+  
+  width: 100%;
+
+  max-width: 720px;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 34%),
+    linear-gradient(180deg, #08751d, #005c20);
+
+  color: white;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.22);
+}
+/* TOPO */
+
+.tela-inicial h1,
+.topo-ano {
+  background-color: white;
+  color: #064c19;
+}
+
+.tela-inicial h1 {
+  text-align: center;
+
+  position: relative;
+
+  font-family: 'Merriweather', serif;
+
+  font-size: clamp(28px, 8vw, 38px);
+
+  padding: 16px 10px;
+
+  letter-spacing: -1px;
+}
+
+.topo-ano {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.topo-ano h2 {
+  font-family: 'Suburbana', serif;
+
+  font-size: clamp(40px, 6vw, 24px);
+}
+
+/*seta para voltar*/
+.voltar {
+
+  position: absolute;
+
+  left: 14px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(6, 76, 25, 0.08);
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  color: #064c19;
+
+  font-size: 42px;
+
+  font-family: inherit;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.voltar:hover {
+
+  transform: scale(1.08);
+
+  background:
+    rgba(6, 76, 25, 0.14);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.12);
+}
+
+.voltar:active {
+
+  transform: scale(0.94);
+}
+/* TELA INICIAL */
+
+.texto {
+  padding: 32px 24px 18px;
+
+  position: relative;
+}
+
+.texto::after {
+  content: "";
+
+  width: 34px;
+  height: 5px;
+
+  background-color: #ffd400;
+
+  border-radius: 50px;
+
+  display: block;
+
+  margin-top: 14px;
+}
+
+.texto h2 {
+  font-family: 'Inter', serif;
+
+  font-size: clamp(28px, 8vw, 38px);
+
+  line-height: 1.18;
+
+  margin-bottom: 14px;
+
+  max-width: 340px;
+}
+
+.texto p {
+  font-size: clamp(14px, 4vw, 17px);
+
+  line-height: 1.45;
+
+  max-width: 340px;
+
+  color: rgba(255,255,255,0.9);
+}
+
+/* CARDS DOS ANOS */
+
+.botoes-anos {
+  padding: 18px 20px 36px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.botao-ano {
+  width: 100%;
+  min-height: 112px;
+
+  border: 2px solid rgba(255,255,255,0.82);
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: rgba(0,0,0,0.16);
+
+  display: grid;
+  grid-template-columns: 1fr 48px;
+
+  align-items: center;
+
+  padding: 10px 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.botao-ano::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,70,23,0.15),
+      rgba(0,70,23,0.72)
+    );
+
+  z-index: 1;
+}
+
+.botao-ano img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.45;
+
+  filter: saturate(0.6) contrast(1.08);
+
+  transition:
+    opacity 0.35s ease,
+    filter 0.35s ease,
+    transform 0.35s ease;
+
+  font-size: 0;
+}
+
+.losango-ano {
+  width: 148px;
+  height: 96px;
+
+  background-color: #ffd400;
+
+  color: #0057ff;
+
+  font-size: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    0% 50%
   );
 
   position: relative;
